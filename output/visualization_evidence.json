@@ -1,0 +1,40 @@
+{
+  "critique": [
+    {
+      "category": "unsupported claim",
+      "problem": "The title claims that Center-based rehab caused better attendance, but the data only show an association and cannot prove causation.",
+      "repair": "Use a neutral title such as Cardiac rehab attendance by program and quarter."
+    },
+    {
+      "category": "truncated baseline",
+      "problem": "The y-axis starts at 76 instead of 0, making small differences in attendance look much larger.",
+      "repair": "Start the y-axis at 0 and extend it to 100 to show the full percentage scale."
+    },
+    {
+      "category": "missing unit",
+      "problem": "The y-axis does not explain that attendance is measured as a percentage.",
+      "repair": "Label the y-axis Scheduled sessions attended (%)."
+    },
+    {
+      "category": "color-only encoding",
+      "problem": "The chart uses red and green to distinguish the programs, which may be difficult for people with color vision deficiencies.",
+      "repair": "Use colorblind-friendly blue and orange with different hatch patterns for each program."
+    },
+    {
+      "category": "distracting decoration",
+      "problem": "Thick borders, heavy gridlines, and dense crosshatching make the chart cluttered and distract from the attendance values.",
+      "repair": "Remove unnecessary borders and heavy gridlines, and use simpler hatch patterns."
+    }
+  ],
+  "question": "How does the percentage of patients meeting the weekly exercise goal change across four follow-up visits for Home-based and Center-based cardiac rehabilitation programs?",
+  "audience": "The cardiac rehabilitation program coordinator, who will use the chart to compare outcomes and identify where patients may need additional support.",
+  "intended_claim": "At visit 4, 79% of Center-based patients and 70% of Home-based patients met the weekly exercise goal, a difference of 9 percentage points.",
+  "y_measure": "Percentage of patients meeting the weekly exercise goal of 150 minutes of exercise.",
+  "grain": "Each row represents one rehabilitation program at one follow-up visit.",
+  "data_types": {
+    "program": "categorical",
+    "visit_number": "ordinal",
+    "goal_met_pct": "quantitative"
+  },
+  "text_alternative": "This line chart compares the percentage of cardiac rehabilitation patients meeting the weekly exercise goal of 150 minutes across four follow-up visits. The x-axis shows visits 1 through 4, and the y-axis shows the percentage of patients meeting the goal from 0 to 100%. The orange dashed line with square markers represents Home-based patients, while the blue solid line with circular markers represents Center-based patients. At visit 4, 70% of Home-based patients and 79% of Center-based patients met the exercise goal, a difference of 9 percentage points. These results describe an association and do not prove that either rehabilitation program caused better outcomes."
+}
